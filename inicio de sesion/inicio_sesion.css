@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.location-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.header-image {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+h1 {
+    color: #000;
+}
+
+.login-container {
+    margin-top: 3em;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    
+}
+
+.login-container img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: -30px;
+    margin-top: -100px;
+}
+
+.form{
+    align-items: center;
+    justify-content: center;
+    
+}
+.form a{
+    
+    color: #000;
+}
+
+.login-container .form label{
+    text-align: start;
+    align-self: center;
+    color: #000;
+}
+
+.login-container input {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.login-container button {
+    font-weight: bold;
+    width: 375px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    color: #000;
+    padding: 0.5em;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login a {
+    align-items: center;
+    display: inline-block;
+    width: 30px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.social-login .facebook {
+    padding: 7px;
+    width: 355px;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+}
+.social-login a img{
+    margin-bottom: -6px;
+    margin-right: 1em;
+    width: 25px;
+    height: 25px;
+}
+.social-login .google {
+    padding: 7px;
+    width: 355px;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+}
+
+#tyc{
+    color: #000;
+}

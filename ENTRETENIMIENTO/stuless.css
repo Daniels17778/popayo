@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.border-image {
+    width: 100%;
+    margin-top: 80px;
+    z-index: 2;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgba(0, 0, 0, 0.802);
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 20;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-item i {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 15px;
+    z-index: 20;
+}
+
+.action-btn {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 105px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: rgb(0, 0, 0);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: all 0.5s ease;
+        z-index: 9;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute; /* Cambiado de static a absolute */
+        right: 140px; /* Ajusta este valor para separarlo de los iconos de acción  separelo con lo que quiera o pueda*/
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 11; /* Asegura que este por encima de otros elementos */
+    }
+
+    .nav-actions {
+        z-index: 10; /* Mantiene visibles los botones de acción */
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+
+
+
+
+/* ENTRETENIMIENTO */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-fluid {    
+    width: 50px;
+    height: 550px;
+    background-color: white;
+    color:black;
+    position: relative;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    margin: 30px 30px 30px 30px;
+}
+
+.fondo1 {
+    background-image: url(fondo2.png);
+}
+
+.row .text {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.text hr {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ENTRETENIMIENTO FASE1 */
+
+.hero-container .row {
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    margin: 30px 30px 30px 30px;
+}
+
+.fondo2 {
+    background-color: black;
+    color: white;
+}
+
+.row .text1 {
+    text-align: center;
+    top: 10px;
+    margin: 10px 5px 10px 5px;
+}
+
+.text1 hr {
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row .text2 {
+    text-align: center;
+    color: black;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+/* inicio footer*/
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    flex: 1;
+    clear: both;
+}
+
+
+.redes, .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+.redes li, .menu li {
+    list-style: none;
+}
+.redes li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.redes li a:hover {
+    transform: translateY(-10px);
+}
+.menu li a {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    display: inline-block;
+    
+    opacity: 0.75;
+}
+.menu li a:hover {
+    opacity: 1;
+}
+footer p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    z-index: 10;
+}
+footer .wave-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+footer .wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url(../img_Nuestra_Ubicacion/wave.png);
+    background-size: 1000px 100px;
+    
+}
+footer .wave#wave1 {
+    opacity: 1;
+    bottom: 0;
+    animation: animacionWave 4s linear infinite;
+}
+footer .wave#wave2 {
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animacionWave2 7s linear infinite;
+}
+footer .wave#wave3 {
+    opacity: 0.3;
+    bottom: 20px;
+    animation: animacionWave 4s linear infinite;
+}
+footer .wave#wave4 {
+    opacity: 0.1;
+    bottom: 30px;
+    animation: animacionWave2 7s linear infinite;
+}
+
+@keyframes animacionWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animacionWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* Botón flotante lateral para modo daltónico */
+.daltonic-toggle {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.daltonic-toggle:hover {
+    background-color: #333;
+}
+
+/* Modo daltónico: colores adaptados */
+body.daltonic-mode {
+    filter: grayscale(0.3) contrast(1.2);
+}
+
+body.daltonic-mode .nav-item,
+body.daltonic-mode .nav-item i,
+body.daltonic-mode .logo {
+    color: #000 !important;
+}
+
+body.daltonic-mode nav {
+    background-color: #FFD700 !important; /* Amarillo para alto contraste */
+}
+
+body.daltonic-mode .overlay {
+    background-color: rgba(255, 255, 0, 0.3) !important; /* Tono claro */
+}

@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgba(0, 0, 0, 0.802);
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 20;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-item i {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 15px;
+    z-index: 20;
+}
+
+.action-btn {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Ubicacion Nuestra */
+.location-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.header-line {
+    width: 400px;  /* Ancho de la línea */
+    height: 3px;   /* Grosor de la línea */
+    background-color: white;  /* Color blanco */
+    margin: 10px auto 30px;  /* Centrado y con espacio */
+}
+.header-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.location-text {
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.location-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.location-text p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+ 
+.location-buttons {
+    display: flex;
+    gap: 0;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.location-buttons button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.location-buttons button:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.location-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.location-buttons button.active {
+    background-color: white;
+    color: black;
+}@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 105px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: rgb(0, 0, 0);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: all 0.5s ease;
+        z-index: 9;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 140px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 11;
+    }
+    
+    .nav-actions {
+        z-index: 10;
+    }
+    
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .location-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .location-text p {
+        font-size: 0.9rem;
+    }
+
+    .location-buttons {
+        flex-direction: column;
+        width: 80%;
+    }
+}
+.map-container {
+    width: 650px;
+    height: 650px;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 86%;
+    border: none;
+    border-radius: 10px;
+}
+.location-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 50px;
+    gap: 20px;
+}
+
+.location-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    max-width: 600px; 
+    margin: 19px auto; /* Centra el contenedor */
+}
+
+.location-images img {
+    width: 100%; /* Ajusta el ancho de las imágenes */
+    height: auto; 
+    border-radius: 8px; 
+}
+
+.location-images img:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .location-section {
+        flex-direction: column;
+    }
+
+    .location-images, .map-container {
+        width: 100%;
+    }
+}
+
+/* inicio footer */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    min-height: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    flex: 1;
+    margin-top: -5%;
+}
+
+
+.redes, .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+.redes li, .menu li {
+    list-style: none;
+}
+.redes li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.redes li a:hover {
+    transform: translateY(-10px);
+}
+.menu li a {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    display: inline-block;
+    
+    opacity: 0.75;
+}
+.menu li a:hover {
+    opacity: 1;
+}
+footer p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    z-index: 10;
+}
+footer .wave-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+footer .wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url(img_Nuestra_Ubicacion/wave.png);
+    background-size: 1000px 100px;
+    
+}
+footer .wave#wave1 {
+    opacity: 1;
+    bottom: 0;
+    animation: animacionWave 4s linear infinite;
+}
+footer .wave#wave2 {
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animacionWave2 7s linear infinite;
+}
+footer .wave#wave3 {
+    opacity: 0.3;
+    bottom: 20px;
+    animation: animacionWave 4s linear infinite;
+}
+footer .wave#wave4 {
+    opacity: 0.1;
+    bottom: 30px;
+    animation: animacionWave2 7s linear infinite;
+}
+
+@keyframes animacionWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animacionWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+
+/* Botón flotante lateral para modo daltónico */
+.daltonic-toggle {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.daltonic-toggle:hover {
+    background-color: #333;
+}
+
+/* Modo daltónico: colores adaptados */
+body.daltonic-mode {
+    filter: grayscale(0.3) contrast(1.2);
+}
+
+body.daltonic-mode .nav-item,
+body.daltonic-mode .nav-item i,
+body.daltonic-mode .logo {
+    color: #000 !important;
+}
+
+body.daltonic-mode nav {
+    background-color: #FFD700 !important; /* Amarillo para alto contraste */
+}
+
+body.daltonic-mode .overlay {
+    background-color: rgba(255, 255, 0, 0.3) !important; /* Tono claro */
+}
+
