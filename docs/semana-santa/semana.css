@@ -136,15 +136,15 @@ nav {
 
     .hamburger {
         display: block;
-        position: absolute; 
-        right: 140px; 
+        position: absolute; /* Cambiado de static a absolute */
+        right: 140px; /* Ajusta este valor para separarlo de los iconos de acción */
         top: 50%;
         transform: translateY(-50%);
-        z-index: 11; 
+        z-index: 11; /* Asegura que esté por encima de otros elementos */
     }
 
     .nav-actions {
-        z-index: 10; 
+        z-index: 10; /* Mantiene visibles los botones de acción */
     }
 
     .hamburger.active div:nth-child(1) {
@@ -159,7 +159,6 @@ nav {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 }
-
 
 footer {
     position: relative;
