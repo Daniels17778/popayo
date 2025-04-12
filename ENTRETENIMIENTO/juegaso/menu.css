@@ -75,7 +75,7 @@ body, html {
 .game-title {
     font-size: 4rem;
     color: #ecca5a;
-    text-shadow: 10px 6px 5px #000000;
+    text-shadow: 10px 6px 5px #f8f8f85e;
     margin-bottom: 25px;
     text-align: left; /* Alinea el título a la izquierda */
     z-index: 1;
@@ -106,7 +106,7 @@ body, html {
 .menu-buttons button:hover {
     transform: scale(1.05);
     color: #f5cf51;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #fdfdfd;
     background-color: #ffffff; /* Color al pasar el cursor por encima */
 }
 #scoreDisplay {
