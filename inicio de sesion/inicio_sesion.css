@@ -58,7 +58,10 @@ h1 {
     
     color: #000;
 }
-
+.form button a{
+    color: #ffffff;
+    text-decoration: none;
+}
 .login-container .form label{
     text-align: start;
     align-self: center;
