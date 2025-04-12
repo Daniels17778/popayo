@@ -407,7 +407,10 @@ nav {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+  .cta a{
+    color: #ffffff;
+    text-decoration: none;
+  }
   .cta:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
